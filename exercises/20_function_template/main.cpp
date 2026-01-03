@@ -17,8 +17,8 @@ bool approximately_equal(T a, T b, T epsilon = std::numeric_limits<T>::epsilon()
     if (a == b) return true;
     
     // 计算相对误差
-    T diff = std::fabs(a - b);
-    T max_val = std::max(std::fabs(a), std::fabs(b));
+    T diff = std::abs(a - b);
+    T max_val = std::max(std::abs(a), std::abs(b));
     
     return diff <= epsilon * max_val;
 }
