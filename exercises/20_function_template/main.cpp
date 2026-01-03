@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
     ASSERT(plus(1.25f, 2.5f) == 3.75f, "Plus two float");
     ASSERT(plus(1.25, 2.5) == 3.75, "Plus two double");
     // TODO: 修改判断条件使测试通过
-    ASSERT(approximately_equal(plus(0.1, 0.2),0.3), "How to make this pass?");
+    ASSERT(approximately_equal(plus(0.1, 0.2), 0.3, 1e-10), "How to make this pass?");
 
     return 0;
 }
